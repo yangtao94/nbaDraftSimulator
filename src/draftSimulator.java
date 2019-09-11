@@ -1,6 +1,3 @@
-import com.sun.jdi.ArrayReference;
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class draftSimulator{
@@ -19,14 +16,11 @@ public class draftSimulator{
         return singleton;
     }
 
-    public void echo() {
-       //test instance
-        System.out.println(Arrays.toString(combinations.toArray()));
-    }
 
-    public void generateCombinations() {
+
+    private void generateCombinations() {
         //generate 4 number combinations from 14 numbers
-        combinationHelper(combinations,new ArrayList<Integer>(),14,4,1);
+        combinationHelper(combinations,new ArrayList<>(),14,4,1);
         //remove final combination to reach 1000 combinations
         combinations.remove(combinations.size()-1);
 
